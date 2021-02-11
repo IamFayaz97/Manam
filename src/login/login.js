@@ -1,5 +1,4 @@
 function changeUserName(){
-
     var formData = new FormData(document.querySelector('form'));
     localStorage.setItem("loggedUserName", formData.get("firstName") + " " + formData.get("lastName"));
     document.getElementById("loggedUserName").innerHTML = localStorage.getItem("loggedUserName");
