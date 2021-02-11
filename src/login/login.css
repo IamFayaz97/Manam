@@ -2,7 +2,7 @@ body{
     margin: 10%;
     padding: 10%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background: url("/src/resources/images/Background.png") no-repeat;
+    background: url("./../resources/images/Background.png") no-repeat;
     background-size: cover;
     color: aliceblue;
 }
