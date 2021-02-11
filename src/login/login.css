@@ -1,0 +1,22 @@
+body{
+    margin: 10%;
+    padding: 10%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: url("/src/resources/images/Background.png") no-repeat;
+    background-size: cover;
+    color: aliceblue;
+}
+.login-box{
+    width: 200px;
+    position: relative;
+}
+.login-box label{
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+h2{
+    color: aliceblue;
+    font-size: 50px;
+    border-bottom: 5px solid;
+}
