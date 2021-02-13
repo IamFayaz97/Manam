@@ -1,3 +1,101 @@
-<div class="lunch-container">
-    
-</div>
+<!-- //bootstrap CDN -->
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="./lunch.css">
+</head>
+
+<body>
+    <div class="container">
+        <div align=right>
+            <p>Hi <span id="loggedUserName">Welcome</span></p>
+        </div>
+        <center>
+            <h1>Lunch</h1>
+        </center>
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <img src="../../../src/resources/images/lunch/chickenBiryani.jpg">
+                    <div>
+                        <h4>Chicken Biryani</h4>
+                        <p style="background-color: rgb(193, 235, 235);">Delicious Hyderabadi Chicken biryani that makes
+                            your day.</p>
+                        <button onclick="modifyQuantity('lunch_ChickenBiryani', 'increment')" class="increment"> + </button>
+                        <span id="lunch_ChickenBiryani"></span>
+                        <button onclick="modifyQuantity('lunch_ChickenBiryani', 'decrement')" class="decrement"> - </button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="../../../src/resources/images/lunch/eggBiryani.jpg">
+                    <div>
+                        <h4>Egg Biryani</h4>
+                        <p style="background-color: rgb(193, 235, 235);">The flavour of the biryani with added taste of
+                            egg.</p>
+                        <button onclick="modifyQuantity('lunch_EggBiryani', 'decrement')"> + </button>
+                        <p id="lunch_EggBiryani"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="../../../src/resources/images/lunch/veg_thali.jpg">
+                    <div>
+                        <h4>Full veg meal</h4>
+                        <p style="background-color: rgb(193, 235, 235);">All the food in one place with added taste to
+                            complete your choice of meal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <img src="../../../src/resources/images/lunch/curd_rice.jpg">
+                    <div>
+                        <h4>Curd Rice</h4>
+                        <p style="background-color: rgb(193, 235, 235);">The healthy and tasty curd mixed rice to
+                            complete your meal.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="../../../src/resources/images/lunch/veg_pulaav.jpg">
+                    <div>
+                        <h4>Veg Pulaav</h4>
+                        <p style="background-color: rgb(193, 235, 235);">Get interested with the Royal and healthy great
+                            Indian Veg
+                            Pulaav.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="../../../src/resources/images/lunch/tandoori_roti.jpg">
+                    <div>
+                        <h4>Tandori-Paneer main course</h4>
+                        <p style="background-color: rgb(193, 235, 235);">Activate your taste buds with Paneer and
+                            Tandoori Roti.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./../../login/login.js"></script>
+</body>
