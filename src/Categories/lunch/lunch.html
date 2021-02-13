@@ -1,18 +1,19 @@
 <!-- //bootstrap CDN -->
 
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
         </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="./lunch.css">
 </head>
 
@@ -32,10 +33,22 @@
                         <h4>Chicken Biryani</h4>
                         <p style="background-color: rgb(193, 235, 235);">Delicious Hyderabadi Chicken biryani that makes
                             your day.</p>
-                        <button onclick="modifyQuantity('lunch_ChickenBiryani', 'increment')" class="increment"> + </button>
-                        <span id="lunch_ChickenBiryani"></span>
-                        <button onclick="modifyQuantity('lunch_ChickenBiryani', 'decrement')" class="decrement"> - </button>
-
+                        <div id="addButton_lunch_ChickenBiryani">
+                            <center>
+                                <button onclick="hideAddButton('lunch_ChickenBiryani')" class="add">Add</button>
+                            </center>
+                        </div>
+                        <div id="modifyButtons_lunch_ChickenBiryani" style="display: none;">
+                            <center>
+                                <button onclick="modifyQuantity('lunch_ChickenBiryani', 'increment')" class="increment">
+                                    +
+                                </button>
+                                <span id="lunch_ChickenBiryani"></span>
+                                <button onclick="modifyQuantity('lunch_ChickenBiryani', 'decrement')" class="decrement">
+                                    -
+                                </button>
+                            </center>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -46,8 +59,22 @@
                         <h4>Egg Biryani</h4>
                         <p style="background-color: rgb(193, 235, 235);">The flavour of the biryani with added taste of
                             egg.</p>
-                        <button onclick="modifyQuantity('lunch_EggBiryani', 'decrement')"> + </button>
-                        <p id="lunch_EggBiryani"></p>
+                        <div id="addButton_lunch_EggBiryani">
+                            <center>
+                                <button onclick="hideAddButton('lunch_EggBiryani')" class="add">Add</button>
+                            </center>
+                        </div>
+                        <div id="modifyButtons_lunch_EggBiryani" style="display: none;">
+                            <center>
+                                <button onclick="modifyQuantity('lunch_EggBiryani', 'increment')" class="increment">
+                                    +
+                                </button>
+                                <span id="lunch_EggBiryani"></span>
+                                <button onclick="modifyQuantity('lunch_EggBiryani', 'decrement')" class="decrement">
+                                    -
+                                </button>
+                            </center>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -58,6 +85,22 @@
                         <h4>Full veg meal</h4>
                         <p style="background-color: rgb(193, 235, 235);">All the food in one place with added taste to
                             complete your choice of meal.</p>
+                        <div id="addButton_lunch_FullVegMeal">
+                            <center>
+                                <button onclick="hideAddButton('lunch_FullVegMeal')" class="add">Add</button>
+                            </center>
+                        </div>
+                        <div id="modifyButtons_lunch_FullVegMeal" style="display: none;">
+                            <center>
+                                <button onclick="modifyQuantity('lunch_FullVegMeal', 'increment')" class="increment">
+                                    +
+                                </button>
+                                <span id="lunch_FullVegMeal"></span>
+                                <button onclick="modifyQuantity('lunch_FullVegMeal', 'decrement')" class="decrement">
+                                    -
+                                </button>
+                            </center>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,6 +114,22 @@
                         <h4>Curd Rice</h4>
                         <p style="background-color: rgb(193, 235, 235);">The healthy and tasty curd mixed rice to
                             complete your meal.</p>
+                        <div id="addButton_lunch_CurdRice">
+                            <center>
+                                <button onclick="hideAddButton('lunch_CurdRice')" class="add">Add</button>
+                            </center>
+                        </div>
+                        <div id="modifyButtons_lunch_CurdRice" style="display: none;">
+                            <center>
+                                <button onclick="modifyQuantity('lunch_CurdRice', 'increment')" class="increment">
+                                    +
+                                </button>
+                                <span id="lunch_CurdRice"></span>
+                                <button onclick="modifyQuantity('lunch_CurdRice', 'decrement')" class="decrement">
+                                    -
+                                </button>
+                            </center>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,8 +139,23 @@
                     <div>
                         <h4>Veg Pulaav</h4>
                         <p style="background-color: rgb(193, 235, 235);">Get interested with the Royal and healthy great
-                            Indian Veg
-                            Pulaav.</p>
+                            Indian Veg Pulaav.</p>
+                            <div id="addButton_lunch_VegPulaav">
+                                <center>
+                                    <button onclick="hideAddButton('lunch_VegPulaav')" class="add">Add</button>
+                                </center>
+                            </div>
+                            <div id="modifyButtons_lunch_VegPulaav" style="display: none;">
+                                <center>
+                                    <button onclick="modifyQuantity('lunch_VegPulaav', 'increment')" class="increment">
+                                        +
+                                    </button>
+                                    <span id="lunch_VegPulaav"></span>
+                                    <button onclick="modifyQuantity('lunch_VegPulaav', 'decrement')" class="decrement">
+                                        -
+                                    </button>
+                                </center>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -92,6 +166,22 @@
                         <h4>Tandori-Paneer main course</h4>
                         <p style="background-color: rgb(193, 235, 235);">Activate your taste buds with Paneer and
                             Tandoori Roti.</p>
+                            <div id="addButton_lunch_Tandoori">
+                                <center>
+                                    <button onclick="hideAddButton('lunch_Tandoori')" class="add">Add</button>
+                                </center>
+                            </div>
+                            <div id="modifyButtons_lunch_Tandoori" style="display: none;">
+                                <center>
+                                    <button onclick="modifyQuantity('lunch_Tandoori', 'increment')" class="increment">
+                                        +
+                                    </button>
+                                    <span id="lunch_Tandoori"></span>
+                                    <button onclick="modifyQuantity('lunch_Tandoori', 'decrement')" class="decrement">
+                                        -
+                                    </button>
+                                </center>
+                            </div>
                     </div>
                 </div>
             </div>

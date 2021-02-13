@@ -1,4 +1,4 @@
-h4{
+h4, p{
     padding: 5px;
 }
 .card:hover{
@@ -11,13 +11,21 @@ h4{
 .container:hover{
     border:cornflowerblue 4px solid;
 }
+button{
+    margin: 5px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+.add{
+    width: 50%;
+    background-color: rgb(107, 138, 240);
+    color: whitesmoke;
+}
 .increment{
     border-color: rgb(8, 70, 240);
     color:black;
     width: 25%;
     font-size: 120%;
-    margin: 5px;
-    border-radius: 12px;
 }
 .increment:hover{
     background-color: rgb(88, 150, 231);
@@ -28,8 +36,6 @@ h4{
     color:black;
     width: 25%;
     font-size: 120%;
-    margin: 5px;
-    border-radius: 12px;
 }
 .decrement:hover{
     background-color: rgb(236, 59, 68);
