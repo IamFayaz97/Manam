@@ -1,3 +1,10 @@
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+
 <!-- //bootstrap CDN -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -5,92 +12,133 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="./breakfast.css">
+<link rel="stylesheet" href="./breakFast.css">
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
 <body>
 
-<div class="container">
-    <div align=right>
-        <P id ="loggedUserName"></P>
-       </div> 
-   <center><h1>Break Fast</h1></center>
-    <div class="row">
-        <div class="col-4">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="../../../src/resources/images/download.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="container">
+        <div align=right>
+            <P id="loggedUserName"></P>
+        </div>
+        <button onclick="checkout()" >
+          <a href="./checkOut.html"> CheckOut</a>  
+        </button>
+        <div>
+            <p id='checkout'></p>
+        </div>
+        <center>
+            <h1>Break Fast</h1>
+        </center>
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../src/resources/images/Breakfast/idly.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">IDLY</h5>
+                        <p class="card-text">Idli or idly ( pronunciation (help·info)) (/ɪdliː/)
+                            are a type of savoury rice cake, originating from the Indian subcontinent,
+                            popular as breakfast foods in Southern India.</p>
+
+                        <div id="addButton_Idly">
+                            <center>
+                                <button onclick="hideAddButton('Idly')" class="btn btn-primary">Add</button>
+                            </center>
+                        </div>
+                        <div id="modifyButtons_Idly" style="display: none;">
+                            <center>
+                                <button onclick="quantityChangeValue('Idly', 'increment')" class="increment">
+                                    +
+                                </button>
+                                <span id="Idly"></span>
+                                <button onclick="quantityChangeValue('Idly', 'decrement')" class="decrement">
+                                    -
+                                </button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../src/resources/images/Breakfast/Dosa.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">DOSA</h5>
+                        <p class="card-text">A dosa or dose is a thin pancake or crepe, originating from South India,
+                            made from a fermented batter predominantly consisting of lentils and rice. ... .</p>
+                        <div id="addButton_Dosa">
+                            <center>
+                                <button onclick="hideAddButton('Dosa')" class="btn btn-primary">Add</button>
+                            </center>
+                        </div>
+                        <div id="modifyButtons_Dosa" style="display: none;">
+                            <center>
+                                <button onclick="quantityChangeValue('Dosa', 'increment')" class="increment">
+                                    +
+                                </button>
+                                <span id="Dosa"></span>
+                                <button onclick="quantityChangeValue('Dosa', 'decrement')" class="decrement">
+                                    -
+                                </button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../src/resources/images/Breakfast/Puri.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">PURI</h5>
+                        <p class="card-text">Puri (also spelled Poori) is a deep-fat fried bread made from unleavened
+                            whole-wheat flour that originated in the Indian subcontinent.</p>
+                        <a href="#" class="btn btn-primary">Add</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-4">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="../../../src/resources/images/download.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+        <br>
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../src/resources/images/Breakfast/Pongal.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">PONGAL</h5>
+                        <p class="card-text">Pongal is a popular South Indian food made with rice & moong dal, either to
+                            a sweet or savory dish.</p>
+                        <a href="#" class="btn btn-primary">Add</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-4">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="../../../src/resources/images/download.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../src/resources/images/Breakfast/Upma.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">UPMA</h5>
+                        <p class="card-text">Upma is typically made by first lightly dry roasting semolina (called rava
+                            or sooji in India)..</p>
+                        <a href="#" class="btn btn-primary">Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../src/resources/images/Breakfast/Uttapam.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">UTTAPAM</h5>
+                        <p class="card-text">Uttapam batter is a mixture of urad dal and rice; Rice can be a combination
+                            of parboiled rice and a regular variety such as basmati.</p>
+                        <a href="#" class="btn btn-primary">Add</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <br>
-    <div class="row">
-        <div class="col-4">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="../../../src/resources/images/download.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="../../../src/resources/images/download.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="../../../src/resources/images/download.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script src= "./../../login/login.js" ></script>
+    <script src="./../../login/login.js"></script>
+    <script src="./breakFast.js"></script>
 </body>
