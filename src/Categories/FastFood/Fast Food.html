@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
-    
+        <script src="./../../login/login.js"></script>
+        <script src="./Fast Food.js"></script>
 </head>
 
 <body>
@@ -35,7 +36,22 @@
                     <h4>Full: 40/-</h4>
                     <div class="row">
                         <div class="col-12"> 
-                                          <button>Add</button>     <button>Remove</button>
+                            <div id="addButton_Gobi">
+                                <center>
+                                    <button onclick="hideAddButton('Gobi')" class="btn btn-outline-info">Add</button>
+                                </center>
+                            </div>
+                            <div id="modifyButtons_Gobi" style="display: none;">
+                                <center>
+                                    <button onclick="quantityChangeValue('Gobi', 'increment')" class="increment">
+                                        +
+                                    </button>
+                                    <span id="Gobi"></span>
+                                    <button onclick="quantityChangeValue('Gobi', 'decrement')" class="decrement">
+                                        -
+                                    </button>
+                                </center>
+                            </div>
                             
                         </div>
                     </div>
@@ -49,7 +65,22 @@
                     <h4>Full: 80/-</h4>
                     <div class="row">
                         <div class="col-12">
-                            <button>Add</button>     <button>Remove</button>
+                            <div id="addButton_Burger">
+                                <center>
+                                    <button onclick="hideAddButton('Burger')" class="btn btn-outline-info">Add</button>
+                                </center>
+                            </div>
+                            <div id="modifyButtons_Burger" style="display: none;">
+                                <center>
+                                    <button onclick="quantityChangeValue('Burger', 'increment')" class="increment">
+                                        +
+                                    </button>
+                                    <span id="Burger"></span>
+                                    <button onclick="quantityChangeValue('Burger', 'decrement')" class="decrement">
+                                        -
+                                    </button>
+                                </center>
+                            </div>
                         </div>
                     </div>
                 </div></center>
@@ -62,7 +93,22 @@
                     <h4>Full: 80/-</h4>
                     <div class="row">
                         <div class="col-12">
-                            <button>Add</button>     <button>Remove</button>
+                            <div id="addButton_Chicken">
+                                <center>
+                                    <button onclick="hideAddButton('Chicken')" class="btn btn-outline-info">Add</button>
+                                </center>
+                            </div>
+                            <div id="modifyButtons_Chicken" style="display: none;">
+                                <center>
+                                    <button onclick="quantityChangeValue('Chicken', 'increment')" class="increment">
+                                        +
+                                    </button>
+                                    <span id="Chicken"></span>
+                                    <button onclick="quantityChangeValue('Chicken', 'decrement')" class="decrement">
+                                        -
+                                    </button>
+                                </center>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,7 +124,22 @@
                     <h4>Full: 60/-</h4>
                     <div class="row">
                         <div class="col-12">
-                            <button>Add</button>     <button>Remove</button>
+                            <div id="addButton_Fries">
+                                <center>
+                                    <button onclick="hideAddButton('Fries')" class="btn btn-outline-info">Add</button>
+                                </center>
+                            </div>
+                            <div id="modifyButtons_Fries" style="display: none;">
+                                <center>
+                                    <button onclick="quantityChangeValue('Fries', 'increment')" class="increment">
+                                        +
+                                    </button>
+                                    <span id="Fries"></span>
+                                    <button onclick="quantityChangeValue('Fries', 'decrement')" class="decrement">
+                                        -
+                                    </button>
+                                </center>
+                            </div>
                         </div>
                     </div>
                 </div></center>
@@ -91,7 +152,22 @@
                     <h4>Full: 60/-</h4>
                     <div class="row">
                         <div class="col-12">
-                            <button>Add</button>     <button>Remove</button>
+                            <div id="addButton_Onion">
+                                <center>
+                                    <button onclick="hideAddButton('Onion')" class="btn btn-outline-info">Add</button>
+                                </center>
+                            </div>
+                            <div id="modifyButtons_Onion" style="display: none;">
+                                <center>
+                                    <button onclick="quantityChangeValue('Onion', 'increment')" class="increment">
+                                        +
+                                    </button>
+                                    <span id="Onion"></span>
+                                    <button onclick="quantityChangeValue('Onion', 'decrement')" class="decrement">
+                                        -
+                                    </button>
+                                </center>
+                            </div>
                         </div>
                     </div>
                 </div></center>
@@ -104,7 +180,22 @@
                     <h4>Full: 60/-</h4>
                     <div class="row">
                         <div class="col-12">
-                            <button>Add</button>     <button>Remove</button>
+                            <div id="addButton_Vegroll">
+                                <center>
+                                    <button onclick="hideAddButton('Vegroll')" class="btn btn-outline-info">Add</button>
+                                </center>
+                            </div>
+                            <div id="modifyButtons_Vegroll" style="display: none;">
+                                <center>
+                                    <button onclick="quantityChangeValue('Vegroll', 'increment')" class="increment">
+                                        +
+                                    </button>
+                                    <span id="Vegroll"></span>
+                                    <button onclick="quantityChangeValue('Vegroll', 'decrement')" class="decrement">
+                                        -
+                                    </button>
+                                </center>
+                            </div>
                         </div>
                     </div>
                 </div>
