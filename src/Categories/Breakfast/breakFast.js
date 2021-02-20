@@ -36,15 +36,11 @@ function hideAddButton(id) {
 }
 
 function checkout() {
-    var str = "";
-    checkOutMap.forEach(function (value, name) {
-        str = str + "name : " + name + " value : " + value + "<br>";
-        //localStorage.setItem(x, y);
-    });
-    document.getElementById('checkout').innerHTML = str;
-    localStorage.setItem('finalBill', str);
+    console.log("checkOut", checkOutMap);
+    localStorage.setItem('orderList', JSON.stringify(Array.from(checkOutMap.entries())));
+    var orderMap = new Map(JSON.parse(localStorage.getItem('orderList')));
+    console.log(orderMap);
 }
-document.getElementById('cartValue').innerHTML = localStorage.getItem('finalBill');
 
 
 

@@ -6,7 +6,16 @@ function changeUserName() {
 var userName = localStorage.getItem("loggedUserName");
 document.getElementById("loggedUserName").innerHTML = userName;
 
+function getMenu(){
+    //var lunch_data = JSON.parse(lunch_menu);
+    console.log("name: "+ lunch_menu[0].name);
+    console.log("price: "+ getPrice('chickenBiryani'));
 
+}
+
+
+
+/*
 // quantity incrementer
 function modifyQuantity(id, operation) {
     var quantity = Number(localStorage.getItem(id));
@@ -43,3 +52,4 @@ var lunch_FullVegMeal = 100;
 var lunch_CurdRice = 50;
 var lunch_VegPulaav = 75;
 var lunch_Tandoori = 100;
+*/
