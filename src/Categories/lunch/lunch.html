@@ -21,16 +21,17 @@
     <div class="container">
         <div align=right>
             <p>Hi <span id="loggedUserName">Welcome</span></p>
+            <p>Total Cart Amount : <span id="amount"></span></p>
         </div>
-        <button onclick="checkout()" >
-            <a> CheckOut</a>  
-          </button>
-          <div>
-              <p id='checkout'></p>
-          </div>
-          <button onclick="getMenu()">
-              Json Data
-          </button>
+        <button onclick="checkout()">
+            <a> CheckOut</a>
+        </button>
+        <div>
+            <p id='checkout'></p>
+        </div>
+        <button onclick="getMenu()">
+            Json Data
+        </button>
         <center>
             <h1>Lunch</h1>
         </center>
@@ -42,6 +43,7 @@
                         <h4>Chicken Biryani</h4>
                         <p style="background-color: rgb(193, 235, 235);">Delicious Hyderabadi Chicken biryani that makes
                             your day.</p>
+                        <p id="chickenBiryani_price"></p>
                         <div id="addButton_chickenBiryani">
                             <center>
                                 <button onclick="hideAddButton('chickenBiryani')" class="add">Add</button>
@@ -66,8 +68,9 @@
                     <img src="../../../src/resources/images/lunch/eggBiryani.jpg">
                     <div>
                         <h4>Egg Biryani</h4>
-                        <p style="background-color: rgb(193, 235, 235);">The flavour of the biryani with added taste of
+                        <p style="background-color: rgb(193, 235, 235);">The flavour of the biryani with added spices and taste of
                             egg.</p>
+                        <p id="eggBiryani_price"></p>
                         <div id="addButton_eggBiryani">
                             <center>
                                 <button onclick="hideAddButton('eggBiryani')" class="add">Add</button>
@@ -92,8 +95,9 @@
                     <img src="../../../src/resources/images/lunch/veg_thali.jpg">
                     <div>
                         <h4>Full veg meal</h4>
-                        <p style="background-color: rgb(193, 235, 235);">All the food in one place with added taste to
+                        <p style="background-color: rgb(193, 235, 235);">All in one place with added taste to
                             complete your choice of meal.</p>
+                        <p id="fullVegMeal_price"></p>
                         <div id="addButton_fullVegMeal">
                             <center>
                                 <button onclick="hideAddButton('fullVegMeal')" class="add">Add</button>
@@ -123,6 +127,7 @@
                         <h4>Curd Rice</h4>
                         <p style="background-color: rgb(193, 235, 235);">The healthy and tasty curd mixed rice to
                             complete your meal.</p>
+                        <p id="curdRice_price"></p>
                         <div id="addButton_curdRice">
                             <center>
                                 <button onclick="hideAddButton('curdRice')" class="add">Add</button>
@@ -149,22 +154,23 @@
                         <h4>Veg Pulaav</h4>
                         <p style="background-color: rgb(193, 235, 235);">Get interested with the Royal and healthy great
                             Indian Veg Pulaav.</p>
-                            <div id="addButton_vegPulaav">
-                                <center>
-                                    <button onclick="hideAddButton('vegPulaav')" class="add">Add</button>
-                                </center>
-                            </div>
-                            <div id="modifyButtons_vegPulaav" style="display: none;">
-                                <center>
-                                    <button onclick="quantityChangeValue('vegPulaav', 'increment')" class="increment">
-                                        +
-                                    </button>
-                                    <span id="vegPulaav"></span>
-                                    <button onclick="quantityChangeValue('vegPulaav', 'decrement')" class="decrement">
-                                        -
-                                    </button>
-                                </center>
-                            </div>
+                        <p id="vegPulaav_price"></p>
+                        <div id="addButton_vegPulaav">
+                            <center>
+                                <button onclick="hideAddButton('vegPulaav')" class="add">Add</button>
+                            </center>
+                        </div>
+                        <div id="modifyButtons_vegPulaav" style="display: none;">
+                            <center>
+                                <button onclick="quantityChangeValue('vegPulaav', 'increment')" class="increment">
+                                    +
+                                </button>
+                                <span id="vegPulaav"></span>
+                                <button onclick="quantityChangeValue('vegPulaav', 'decrement')" class="decrement">
+                                    -
+                                </button>
+                            </center>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,25 +178,26 @@
                 <div class="card">
                     <img src="../../../src/resources/images/lunch/tandoori_roti.jpg">
                     <div>
-                        <h4>Tandori-Paneer main course</h4>
+                        <h4>Tandori Roti</h4>
                         <p style="background-color: rgb(193, 235, 235);">Activate your taste buds with Paneer and
                             Tandoori Roti.</p>
-                            <div id="addButton_tandoori">
-                                <center>
-                                    <button onclick="hideAddButton('tandoori')" class="add">Add</button>
-                                </center>
-                            </div>
-                            <div id="modifyButtons_tandoori" style="display: none;">
-                                <center>
-                                    <button onclick="quantityChangeValue('tandoori', 'increment')" class="increment">
-                                        +
-                                    </button>
-                                    <span id="tandoori"></span>
-                                    <button onclick="quantityChangeValue('tandoori', 'decrement')" class="decrement">
-                                        -
-                                    </button>
-                                </center>
-                            </div>
+                        <p id="tandoori_price"></p>
+                        <div id="addButton_tandoori">
+                            <center>
+                                <button onclick="hideAddButton('tandoori')" class="add">Add</button>
+                            </center>
+                        </div>
+                        <div id="modifyButtons_tandoori" style="display: none;">
+                            <center>
+                                <button onclick="quantityChangeValue('tandoori', 'increment')" class="increment">
+                                    +
+                                </button>
+                                <span id="tandoori"></span>
+                                <button onclick="quantityChangeValue('tandoori', 'decrement')" class="decrement">
+                                    -
+                                </button>
+                            </center>
+                        </div>
                     </div>
                 </div>
             </div>
