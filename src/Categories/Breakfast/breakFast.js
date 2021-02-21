@@ -6,7 +6,7 @@ let checkOutMap = new Map();
 
 window.onload = function onload(){
     for (let index = 0; index < lunch_menu.length; index++) {
-        document.getElementById(lunch_menu[index].id+"_price").innerText = "Rs. " + lunch_menu[index].price;
+        document.getElementById(lunch_menu[index].id + "_price").innerText = "Rs. " + lunch_menu[index].price;
     }
 };
 
