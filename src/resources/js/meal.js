@@ -7,6 +7,15 @@ var lunch_menu = [
     {"id": "tandoori","name" : "Tandoori Roti", "price" : 120, "desc": "", "image": ""}
 ];
 
+function getName(id){
+    for (let index = 0; index < lunch_menu.length; index++) {
+        if (lunch_menu[index].id == id){
+            return lunch_menu[index].name;
+        }
+    }
+    return "";
+}
+
 function getPrice(id){
     for (let index = 0; index < lunch_menu.length; index++) {
         if (lunch_menu[index].id == id){

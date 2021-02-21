@@ -47,8 +47,6 @@ function hideAddButton(id) {
 function checkout() {
     console.log("checkOut", checkOutMap);
     localStorage.setItem('orderList', JSON.stringify(Array.from(checkOutMap.entries())));
-    var orderMap = new Map(JSON.parse(localStorage.getItem('orderList')));
-    console.log(orderMap);
 }
 
 
